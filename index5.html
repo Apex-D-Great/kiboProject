@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- --------css links--------- -->
+         <link rel="stylesheet" href="./css/all.css">
+    <title>Cars Gallery</title>
+    <style>
+        .wrap,.slider,.slide-content{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 97vh;
+            overflow: hidden;
+            margin-top: 7px;
+        }
+        .wrap{
+            position: relative;
+        }
+        .slide{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: contain;
+        }
+        .slide1{background-image: url('./images/cars/pexels-serhii-volyk-5884848.jpg');}
+        .slide2{background-image: url('./images/cars/pexels-mike-b-112460.jpg');}
+        .slide3{background-image: url('./images/cars/pexels-alexgtacar-1592384.jpg');}
+        .slide4{background-image: url('./images/cars/pexels-kelson-downes-1149137.jpg');}
+
+        .slide-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .slide-content span{
+            font-size: 5rem;
+            color: white;
+            text-transform: capitalize;
+            outline: none;
+        }
+        .arrow-right{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            font-size: 4rem;
+            color: white;
+            right: 0;
+        }
+        .arrow-left{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            font-size: 4rem;
+            color: white;
+        }
+        .slide-content span::selection{
+            color: none;
+            background: none;
+        }
+        .like{
+            position: absolute;
+            left: 32%;
+            bottom: 0;
+            margin-bottom: 10px;
+        }
+        .input{
+            border: none;
+            border-bottom: 4px solid white !important;
+            border-radius: 50px;
+            width: 10%;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            background: transparent;
+            outline: none;
+            margin: 30px;
+        }
+        .thumb{
+            font-size: 2.5rem;
+            margin: 0;
+            color: white;
+        }
+        .like::selection{
+            background: none;
+            outline: none;
+            color: none;
+        }
+        .input::selection{
+            background: none;
+            outline: none;
+            color: none;
+        }
+        @media (max-width: 767px){
+            .like{
+            position: absolute;
+            left: 27px;
+            bottom: 0;
+            margin:auto;
+            vertical-align: middle;
+            text-align: center;
+            }
+            .arrow-right{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            font-size: 3rem;
+            color: white;
+            right: 0;
+        }
+        .arrow-left{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            font-size: 3rem;
+            color: white;
+        }
+            .slide-content span{
+            font-size: 3rem;
+            color: white;
+            text-transform: capitalize;
+            outline: none;
+        }
+        .slide-content{
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+        }
+        }
+     </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="arrow-left arrow"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="like">
+            <i class="fa-solid fa-thumbs-up thumb thumbs-up"></i>
+            <input type="nuber" class="input input1" value="0" disabled>
+            <i class="fa-solid fa-thumbs-down thumb thumbs-down" ></i>
+            <input type="number" class="input input2" value="0" disabled>
+        </div>
+        <div class="slider">
+            <div class="slide slide1">
+                <div class="slide-content">
+                    <span>image 1</span>
+                </div>
+            </div> <!------slides--->
+            <div class="slide slide2">
+                <div class="slide-content">
+                    <span>image 2</span>
+                </div>
+            </div> <!------slides--->
+            <div class="slide slide3">
+                <div class="slide-content">
+                    <span>image 3</span>
+                </div>
+            </div> <!------slides--->
+            <div class="slide slide4">
+                <div class="slide-content">
+                    <span>image 4</span>
+                </div>
+            </div> <!------slides--->
+        </div>
+        <div class="arrow-right arrow"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

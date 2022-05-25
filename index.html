@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- --------css links--------- -->
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Image Gallery Squad 13</title>
+</head>
+<body>
+    <!-- -----------Nav Bar -------------->
+    <nav>
+        <div class="container">
+            <div class="row justify-content">
+                <div class="logo">SQ-13<span>STUDI<i class="fa-solid fa-camera"></i></span></div>
+                <ul class="nav-item">
+                    <li class="nav-list"><a href="#home" class="nav-link">HOME</a></li>
+                    <li class="nav-list"><a href="#gallery" class="nav-link">GALLERY</a></li>
+                    <li class="nav-list"><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+                <div class="nav-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ----------home page------------- -->
+    <section  id="home" class="section-padding">
+        <div class="container">
+            <div class="row home">
+                <div class="image-container">
+                    <img src="./images/cars/pexels-jiarong-deng-1034662.jpg" alt="nature">
+                </div> <!-----image container----->
+                <div class="content">
+                    <div class="title">
+                        <p>the art of photography</p>
+                    </div>
+                    <div class="sub-title">
+                        <span class="welcome">Welcome</span> <br>
+                        <p>this is squad 13 photo studio collection</p>
+                    </div>
+                    <div class="quote">
+                        <p>"in photography there is a reality so subtle that it becomes real than reality"</p>
+                    </div>
+                    <div class="pad"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- -----------gallery section----------------- -->
+    <section class="section-padding" id="gallery">
+        <div class="container">
+            <div class="page-title">
+                <div class="main-title">
+                    GALLERY
+                </div>
+                <div class="sub-title">
+                    click <span>EXPLORE</span> below to see some of our works!
+                </div>
+
+            </div>
+            <div class="row photo">
+                <div class="slide-container1">
+                    <div class="title"><h3>Nature</h3></div>
+                    <button class="btn btn-slider"><a href="index2.html">Explore</a></button>
+                </div> <!--------carousel container----------->
+                <div class="slide-container2">
+                    <div class="title"><h3>Dogs/Cats</h3></div>
+                    <button class="btn btn-slider"><a href="index3.html">Explore</a></button>
+                </div> <!--------carousel container----------->
+                <div class="slide-container3">
+                    <div class="title"><h3>Kids</h3></div>
+                    <button class="btn btn-slider"><a href="index4.html">Explore</a></button>
+                </div> <!--------carousel container----------->
+                <div class="slide-container4">
+                    <div class="title"><h3>Cars</h3></div>
+                    <button class="btn btn-slider"><a href="index5.html">Explore</a></button>
+                </div> <!--------carousel container----------->
+            </div>
+        </div>
+    </section>
+
+    <!--============== footer ===================-->
+    <footer id="contact">
+        <div class="row contact">
+            <div class="mail">
+                <a href="mailto:apelogunemmanuel5@gmail.com">send us a mail</a>
+                <span><i class="fas fa-envelope"></i></span>
+            </div>
+            <div class="kibo">
+                <p>created by: squad 13</p>
+                <p> KIBO_FINAL_PROJECT</p>
+            </div>
+        </div>
+        <div class="row">
+           <div class="footer-copywrite">
+               <p>&copy; 2022 by ApexSir</p>
+           </div>
+       </div>
+    </footer>
+    <script src="./main.js"></script>
+    <script>
+        // toggle effect
+
+const navmenu = document.querySelector('.nav-item');
+const navicon= document.querySelector('.nav-icon');
+
+navicon.addEventListener('click', ()=>{
+    navmenu.classList.toggle('active');
+    console.log('click')
+})
+
+  // closing menu when link is clicked 
+const navlink = document.querySelectorAll('.nav-link');
+navlink.forEach((m)=>{
+    m.addEventListener('click',()=>{
+      const navmenu = document.querySelector('.nav-item');
+      navmenu.classList.remove('active')
+    })
+})
+
+
+    </script>
+</body>
+</html>
