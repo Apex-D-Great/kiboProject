@@ -60,7 +60,7 @@ thumbsUp.addEventListener('click',()=>{
     input1.value = parseInt(input1.value) + 1;
 })
 
-git initthumbsDown.addEventListener('click',()=>{
+ initthumbsDown.addEventListener('click',()=>{
     input2.value = parseInt(input2.value) + 1;
 })
 
